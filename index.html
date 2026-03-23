@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小杰 - 我的计划日历</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome 图标 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <!-- 侧边栏 -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <i class="fa-solid fa-brain"></i>
+          <span>小杰</span>
+        </div>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active">
+          <i class="fa-solid fa-calendar-days"></i>
+          <span>计划日历</span>
+        </a>
+        <a href="#" class="nav-item">
+          <i class="fa-solid fa-newspaper"></i>
+          <span>每日新闻</span>
+        </a>
+        <a href="#" class="nav-item">
+          <i class="fa-solid fa-list-check"></i>
+          <span>待办事项</span>
+        </a>
+        <a href="#" class="nav-item">
+          <i class="fa-solid fa-chart-gantt"></i>
+          <span>项目进度</span>
+        </a>
+        <a href="#" class="nav-item">
+          <i class="fa-solid fa-folder-tree"></i>
+          <span>文件夹</span>
+        </a>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <div class="user-info">
+          <div class="avatar">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="user-details">
+            <span class="username">Yao</span>
+            <span class="user-status">在线</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 主内容区 -->
+    <main class="main-content">
+      <!-- 顶部导航 -->
+      <header class="topbar">
+        <div class="breadcrumb">
+          <span class="breadcrumb-item">我的计划</span>
+        </div>
+        
+        <div class="topbar-actions">
+          <button class="btn btn-icon" title="搜索">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <button class="btn btn-icon" title="通知">
+            <i class="fa-regular fa-bell"></i>
+          </button>
+          <button class="btn btn-primary">
+            <i class="fa-solid fa-plus"></i>
+            <span>新建计划</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- 内容区域 -->
+      <div class="content-wrapper">
+        <!-- 欢迎区域 -->
+        <div class="welcome-section">
+          <h1>你好，Yao 👋</h1>
+          <p>今天是个好日子，来规划一下吧！</p>
+        </div>
+
+        <!-- 统计卡片 -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon" style="background: linear-gradient(135deg, #8b5cf6, #6366f1);">
+              <i class="fa-solid fa-calendar-check"></i>
+            </div>
+            <div class="stat-info">
+              <span class="stat-value">12</span>
+              <span class="stat-label">本周完成</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <div class="stat-info">
+              <span class="stat-value">5</span>
+              <span class="stat-label">待处理</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon" style="background: linear-gradient(135deg, #10b981, #059669);">
+              <i class="fa-solid fa-fire"></i>
+            </div>
+            <div class="stat-info">
+              <span class="stat-value">7</span>
+              <span class="stat-label">连续打卡</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8);">
+              <i class="fa-solid fa-target"></i>
+            </div>
+            <div class="stat-info">
+              <span class="stat-value">85%</span>
+              <span class="stat-label">本月目标</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 日历区域 -->
+        <div class="calendar-section">
+          <div class="section-header">
+            <h2><i class="fa-regular fa-calendar"></i> 本月日历</h2>
+            <div class="month-nav">
+              <button class="btn btn-icon"><i class="fa-solid fa-chevron-left"></i></button>
+              <span class="current-month">2026年3月</span>
+              <button class="btn btn-icon"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+          </div>
+          
+          <div class="calendar-grid">
+            <div class="calendar-header">
+              <span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span>
+            </div>
+            <div class="calendar-body">
+              <!-- 上月天数 -->
+              <div class="calendar-day disabled">22</div>
+              <div class="calendar-day disabled">23</div>
+              <div class="calendar-day disabled">24</div>
+              <div class="calendar-day disabled">25</div>
+              <div class="calendar-day disabled">26</div>
+              <div class="calendar-day disabled">27</div>
+              <div class="calendar-day disabled">28</div>
+              <!-- 本月天数 -->
+              <div class="calendar-day">1</div>
+              <div class="calendar-day">2</div>
+              <div class="calendar-day">3</div>
+              <div class="calendar-day">4</div>
+              <div class="calendar-day">5</div>
+              <div class="calendar-day">6</div>
+              <div class="calendar-day">7</div>
+              <div class="calendar-day">8</div>
+              <div class="calendar-day">9</div>
+              <div class="calendar-day">10</div>
+              <div class="calendar-day">11</div>
+              <div class="calendar-day">12</div>
+              <div class="calendar-day">13</div>
+              <div class="calendar-day">14</div>
+              <div class="calendar-day">15</div>
+              <div class="calendar-day">16</div>
+              <div class="calendar-day">17</div>
+              <div class="calendar-day">18</div>
+              <div class="calendar-day">19</div>
+              <div class="calendar-day">20</div>
+              <div class="calendar-day">21</div>
+              <div class="calendar-day">22</div>
+              <div class="calendar-day">23</div>
+              <div class="calendar-day today has-event">24</div>
+              <div class="calendar-day has-event">25</div>
+              <div class="calendar-day">26</div>
+              <div class="calendar-day">27</div>
+              <div class="calendar-day">28</div>
+              <div class="calendar-day">29</div>
+              <div class="calendar-day">30</div>
+              <div class="calendar-day">31</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 计划列表 -->
+        <div class="plans-section">
+          <div class="section-header">
+            <h2><i class="fa-solid fa-list-ul"></i> 近期计划</h2>
+            <a href="#" class="see-all">查看全部 →</a>
+          </div>
+          
+          <div class="plans-list">
+            <!-- 计划卡片 -->
+            <div class="plan-card">
+              <div class="plan-status done"></div>
+              <div class="plan-content">
+                <h3 class="plan-title">完成项目文档</h3>
+                <p class="plan-desc">整理并完善所有技术文档</p>
+                <div class="plan-meta">
+                  <span class="plan-tag tag-work">工作</span>
+                  <span class="plan-date"><i class="fa-regular fa-clock"></i> 今天</span>
+                </div>
+              </div>
+              <button class="btn btn-icon plan-actions">
+                <i class="fa-solid fa-ellipsis"></i>
+              </button>
+            </div>
+
+            <div class="plan-card">
+              <div class="plan-status pending"></div>
+              <div class="plan-content">
+                <h3 class="plan-title">学习 React 新特性</h3>
+                <p class="plan-desc">了解 Server Components 和 RSC</p>
+                <div class="plan-meta">
+                  <span class="plan-tag tag-learning">学习</span>
+                  <span class="plan-date"><i class="fa-regular fa-clock"></i> 明天</span>
+                </div>
+              </div>
+              <button class="btn btn-icon plan-actions">
+                <i class="fa-solid fa-ellipsis"></i>
+              </button>
+            </div>
+
+            <div class="plan-card">
+              <div class="plan-status in-progress"></div>
+              <div class="plan-content">
+                <h3 class="plan-title">健身计划</h3>
+                <p class="plan-desc">每周三次健身房</p>
+                <div class="plan-meta">
+                  <span class="plan-tag tag-health">健康</span>
+                  <span class="plan-date"><i class="fa-regular fa-clock"></i> 每天</span>
+                </div>
+              </div>
+              <button class="btn btn-icon plan-actions">
+                <i class="fa-solid fa-ellipsis"></i>
+              </button>
+            </div>
+
+            <div class="plan-card">
+              <div class="plan-status"></div>
+              <div class="plan-content">
+                <h3 class="plan-title">月度总结</h3>
+                <p class="plan-desc">回顾本月目标和收获</p>
+                <div class="plan-meta">
+                  <span class="plan-tag tag-personal">个人</span>
+                  <span class="plan-date"><i class="fa-regular fa-clock"></i> 3月31日</span>
+                </div>
+              </div>
+              <button class="btn btn-icon plan-actions">
+                <i class="fa-solid fa-ellipsis"></i>
+              </button>
+            </div>
+          </div>
+        <!-- 每日新闻模块 (阿邮) -->
+        <div class="news-section">
+          <div class="section-header">
+            <h2><i class="fa-solid fa-newspaper"></i> 每日新闻 (阿邮)</h2>
+            <a href="#" class="see-all">查看全部 →</a>
+          </div>
+          
+          <div class="news-card">
+            <div class="news-source">
+              <span class="source-badge">科技</span>
+              <span class="news-time">2小时前</span>
+            </div>
+            <h3 class="news-title">OpenAI 发布 GPT-5 预览版，展示新一代 AI 能力</h3>
+            <p class="news-summary">阿邮简介：OpenAI 发布了 GPT-5 技术预览，展示了对复杂推理、长上下文理解的新突破...</p>
+            <div class="news-detail">
+              <h4>详细报道：</h4>
+              <p>OpenAI 今日发布了 GPT-5 的技术预览版，这是继 GPT-4 之后的又一重大更新。新版本在多个关键领域实现了突破：</p>
+              <ul>
+                <li><strong>复杂推理能力</strong>：在数学、物理等科学问题上的准确率提升 40%</li>
+                <li><strong>长上下文理解</strong>：支持最高 200万 token 的上下文窗口</li>
+                <li><strong>多模态进化</strong>：图像、视频、音频的理解和生成能力大幅增强</li>
+                <li><strong>实时学习</strong>：能够在对话中动态学习用户偏好</li>
+              </ul>
+              <p>Sam Altman 表示，GPT-5 将在今年晚些时候正式发布，企业版 API 将优先开放。</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+</body>
+</html>
