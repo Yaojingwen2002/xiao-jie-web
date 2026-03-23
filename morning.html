@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>每日晨报 - 小杰</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="page.css">
+  <link rel="stylesheet" href="morning.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <!-- 侧边栏 -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <i class="fa-solid fa-brain"></i>
+          <span>小杰</span>
+        </div>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <a href="index.html" class="nav-item">
+          <i class="fa-solid fa-house"></i>
+          <span>主页</span>
+        </a>
+        <a href="calendar.html" class="nav-item">
+          <i class="fa-solid fa-calendar-days"></i>
+          <span>计划日历</span>
+        </a>
+        <a href="news.html" class="nav-item">
+          <i class="fa-solid fa-newspaper"></i>
+          <span>阿邮晨报</span>
+        </a>
+        <a href="morning.html" class="nav-item active">
+          <i class="fa-solid fa-sun"></i>
+          <span>每日晨报</span>
+        </a>
+        <a href="todos.html" class="nav-item">
+          <i class="fa-solid fa-list-check"></i>
+          <span>待办事项</span>
+        </a>
+        <a href="projects.html" class="nav-item">
+          <i class="fa-solid fa-chart-gantt"></i>
+          <span>项目进度</span>
+        </a>
+        <a href="files.html" class="nav-item">
+          <i class="fa-solid fa-folder-tree"></i>
+          <span>文件夹</span>
+        </a>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <div class="user-info" onclick="showSettingsMenu(event)">
+          <div class="avatar">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="user-details">
+            <span class="username">Yao</span>
+            <span class="user-status">在线</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 主内容区 -->
+    <main class="main-content">
+      <header class="topbar">
+        <div class="breadcrumb">
+          <a href="index.html" class="breadcrumb-item">小杰</a>
+          <span class="breadcrumb-sep">/</span>
+          <span class="breadcrumb-item">每日晨报</span>
+        </div>
+        
+        <div class="topbar-actions">
+          <span class="current-date" id="currentDate"></span>
+        </div>
+      </header>
+
+      <div class="content-wrapper morning-content">
+        <!-- 日期天气 -->
+        <div class="morning-header">
+          <div class="date-info">
+            <h1>早安，Yao ☀️</h1>
+            <p class="date-text" id="dateText">2026年3月23日 星期一</p>
+          </div>
+          <div class="weather-info">
+            <i class="fa-solid fa-cloud-sun"></i>
+            <span>北京 18°C 晴</span>
+          </div>
+        </div>
+
+        <!-- 石油资讯 -->
+        <div class="section oil-section">
+          <div class="section-header">
+            <div class="section-title">
+              <i class="fa-solid fa-oil-well"></i>
+              <h2>石油资讯</h2>
+            </div>
+            <span class="update-time">更新时间: 2026-03-23 08:00</span>
+          </div>
+          
+          <div class="oil-prices">
+            <div class="price-card">
+              <div class="price-header">
+                <span class="price-name">WTI原油</span>
+                <span class="price-change down">-1.2%</span>
+              </div>
+              <div class="price-value">$68.45</div>
+              <div class="price-trend">
+                <i class="fa-solid fa-arrow-trend-down"></i>
+                <span>震荡下行</span>
+              </div>
+            </div>
+            
+            <div class="price-card">
+              <div class="price-header">
+                <span class="price-name">布伦特原油</span>
+                <span class="price-change down">-0.8%</span>
+              </div>
+              <div class="price-value">$71.23</div>
+              <div class="price-trend">
+                <i class="fa-solid fa-arrow-trend-down"></i>
+                <span>震荡下行</span>
+              </div>
+            </div>
+            
+            <div class="price-card">
+              <div class="price-header">
+                <span class="price-name">纽约汽油</span>
+                <span class="price-change up">+0.5%</span>
+              </div>
+              <div class="price-value">$2.18</div>
+              <div class="price-trend">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+                <span>小幅上涨</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="oil-news">
+            <h3><i class="fa-solid fa-newspaper"></i> 近期要闻</h3>
+            <ul class="news-list">
+              <li>
+                <span class="news-tag">OPEC+</span>
+                <a href="#">OPEC+维持减产协议至二季度末</a>
+              </li>
+              <li>
+                <span class="news-tag">美国</span>
+                <a href="#">美国页岩油产量持续增加</a>
+              </li>
+              <li>
+                <span class="news-tag">中东</span>
+                <a href="#">地缘政治风险支撑油价</a>
+              </li>
+              <li>
+                <span class="news-tag">需求</span>
+                <a href="#">全球石油需求预期下调</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 今日要闻 -->
+        <div class="section news-section">
+          <div class="section-header">
+            <div class="section-title">
+              <i class="fa-solid fa-globe"></i>
+              <h2>今日要闻</h2>
+            </div>
+          </div>
+          
+          <div class="news-grid">
+            <div class="news-item">
+              <div class="news-category">科技</div>
+              <h4>OpenAI 发布 GPT-5 技术预览</h4>
+              <p>复杂推理能力提升 40%，支持 200万 token 上下文</p>
+              <span class="news-time">2小时前</span>
+            </div>
+            
+            <div class="news-item">
+              <div class="news-category">财经</div>
+              <h4>美联储维持利率不变</h4>
+              <p>鲍威尔暗示降息时间点临近</p>
+              <span class="news-time">4小时前</span>
+            </div>
+            
+            <div class="news-item">
+              <div class="news-category">国际</div>
+              <h4>中美高层会谈结束</h4>
+              <p>双方同意保持沟通渠道畅通</p>
+              <span class="news-time">昨天</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 今日待办 -->
+        <div class="section todo-section">
+          <div class="section-header">
+            <div class="section-title">
+              <i class="fa-solid fa-check-circle"></i>
+              <h2>今日待办</h2>
+            </div>
+          </div>
+          
+          <div class="todo-list">
+            <div class="todo-item">
+              <div class="todo-checkbox" onclick="this.classList.toggle('checked')">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <div class="todo-content">
+                <h4>完成项目文档</h4>
+                <p>整理并完善所有技术文档</p>
+              </div>
+              <span class="todo-tag tag-work">工作</span>
+            </div>
+            
+            <div class="todo-item">
+              <div class="todo-checkbox" onclick="this.classList.toggle('checked')">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <div class="todo-content">
+                <h4>阅读阿邮晨报</h4>
+                <p>了解最新行业动态</p>
+              </div>
+              <span class="todo-tag tag-learning">学习</span>
+            </div>
+            
+            <div class="todo-item">
+              <div class="todo-checkbox" onclick="this.classList.toggle('checked')">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <div class="todo-content">
+                <h4>健身计划</h4>
+                <p>每周三次健身房</p>
+              </div>
+              <span class="todo-tag tag-health">健康</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 数据来源 -->
+        <div class="sources-section">
+          <h4><i class="fa-solid fa-link"></i> 数据来源</h4>
+          <div class="sources-list">
+            <a href="https://www.investing.com/commodities/crude-oil" target="_blank">Investing.com</a>
+            <a href="https://oilprice.com" target="_blank">Oilprice.com</a>
+            <a href="https://www.eia.gov/petroleum/" target="_blank">EIA</a>
+            <a href="https://finance.eastmoney.com" target="_blank">东方财富</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- 设置菜单 -->
+  <div id="settingsMenu" class="settings-menu" onclick="closeSettingsMenu(event)">
+    <div class="settings-dropdown" onclick="event.stopPropagation()">
+      <div class="settings-header">
+        <span>设置</span>
+        <button class="close-btn" onclick="closeSettingsMenu()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="settings-options">
+        <div class="settings-option" onclick="triggerAvatarUpload()">
+          <i class="fa-solid fa-camera"></i><span>更换头像</span>
+        </div>
+        <div class="settings-option" onclick="toggleTheme()">
+          <i class="fa-solid fa-moon"></i><span>深色/浅色模式</span>
+        </div>
+      </div>
+      <div class="settings-footer">
+        <div class="changelog-link" onclick="openChangelog()">
+          <i class="fa-solid fa-file-lines"></i><span>更新日志</span>
+          <span class="changelog-info">2026-03-23 / 本地</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <input type="file" id="avatarInput" accept="image/*" style="display:none" onchange="handleAvatarUpload(event)">
+
+  <div id="changelogModal" class="modal" onclick="closeChangelog(event)">
+    <div class="modal-content changelog-modal" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h2><i class="fa-solid fa-file-lines"></i> 更新日志</h2>
+        <button class="close-btn" onclick="closeChangelog()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="changelog-item">
+          <div class="changelog-date">2026-03-23</div>
+          <div class="changelog-content">
+            <h4>小杰网页 v1.0 发布</h4>
+            <ul>
+              <li>创建小杰网页，参考 GitHub 设计风格</li>
+              <li>即梦紫配色 + GitHub 深色主题</li>
+              <li>多页面架构：主页、日历、新闻、待办、项目、文件夹</li>
+              <li>新增每日晨报模块</li>
+              <li>头像右键设置菜单</li>
+              <li>支持更换头像</li>
+              <li>深色/浅色主题切换</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    // 显示当前日期
+    const now = new Date();
+    const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
+    document.getElementById('dateText').textContent = now.toLocaleDateString('zh-CN', options);
+    document.getElementById('currentDate').textContent = now.toLocaleDateString('zh-CN', { month: 'short', day: 'numeric' });
+  </script>
+</body>
+</html>
