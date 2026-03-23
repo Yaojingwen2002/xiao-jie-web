@@ -1,0 +1,13 @@
+.DS_Store
+.clawhub/
+.openclaw/
+memory/
+references/
+scripts/
+skills/
+cert.pem
+key.pem
+deploy.sh
+BOOTSTRAP.md
+HEARTBEAT.md
+*.md
